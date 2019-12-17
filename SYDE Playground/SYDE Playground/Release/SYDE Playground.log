@@ -1,0 +1,46 @@
+﻿  TicTacToe.cpp
+c:\users\chands\documents\github\syde-playground\syde playground\include\consolewindow.h(297): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\include\consolewindow.h(299): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\include\consolewindow.h(300): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\include\settings.h(12): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\chands\documents\github\syde-playground\syde playground\include\defaults.h(15): warning C4091: 'static ': ignored on left of 'SYDEDefaults' when no variable is declared
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(38): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(49): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(80): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(95): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(188): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(195): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(202): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(203): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(215): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(217): warning C4018: '<': signed/unsigned mismatch
+c:\users\chands\documents\github\syde-playground\syde playground\syde playground\tictactoe.cpp(219): warning C4018: '<': signed/unsigned mismatch
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\sydecredits.obj and g:\github repos\custom-console\drawableconsole\release\settings.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\vector2.obj and g:\github repos\custom-console\drawableconsole\release\sydetime.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\customasset.obj and g:\github repos\custom-console\drawableconsole\release\defaults.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\sydekeycode.obj and g:\github repos\custom-console\drawableconsole\release\sydekey.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\textitem.obj and g:\github repos\custom-console\drawableconsole\release\sydetime.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\customanimationasset.obj and g:\github repos\custom-console\drawableconsole\release\consolewindow.obj.  Using first PCH.
+  Generating code
+  3 of 1284 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+SYDEEngine.lib(Defaults.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(Defaults.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(Settings.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(Settings.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(ConsoleWindow.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(ConsoleWindow.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(SYDECredits.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(SYDECredits.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(SYDETime.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(SYDETime.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(SYDEGamePlay.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(SYDEGamePlay.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(SYDELabel.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(SYDELabel.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(Vector2.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(Vector2.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(CustomAsset.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(CustomAsset.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(AssetsClass.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(AssetsClass.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(SYDEKey.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(SYDEKey.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(SYDEKeyCode.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(SYDEKeyCode.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(TextItem.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(TextItem.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(Line.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(Line.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(Artwork.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(Artwork.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(CustomAnimationAsset.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(CustomAnimationAsset.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+SYDEEngine.lib(Activation.obj) : warning LNK4099: PDB 'DrawableConsole.pdb' was not found with 'SYDEEngine.lib(Activation.obj)' or at 'C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\DrawableConsole.pdb'; linking object as if no debug info
+  SYDE Playground.vcxproj -> C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\SYDE Playground.exe
