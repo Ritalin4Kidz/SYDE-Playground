@@ -1,0 +1,6 @@
+﻿  pch.cpp
+  ClientTest.cpp
+g:\github repos\syde-playground\syde playground\clienttest\clienttest.cpp(156): warning C4473: 'printf' : not enough arguments passed for format string
+  g:\github repos\syde-playground\syde playground\clienttest\clienttest.cpp(156): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  g:\github repos\syde-playground\syde playground\clienttest\clienttest.cpp(156): note: the missing variadic argument 1 is required by format string '%d'
+  ClientTest.vcxproj -> G:\Github Repos\SYDE-Playground\SYDE Playground\Debug\ClientTest.exe

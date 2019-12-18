@@ -5,6 +5,7 @@
 #include <vector>
 #include <math.h>
 #include "SYDEstdafx.h"
+#include "Dictionary.h"
 
 
 using namespace std;

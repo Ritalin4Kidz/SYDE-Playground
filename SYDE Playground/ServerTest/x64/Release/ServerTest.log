@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  ServerTest.cpp
+g:\github repos\syde-playground\syde playground\servertest\servertest.cpp(167): warning C4473: 'printf' : not enough arguments passed for format string
+  g:\github repos\syde-playground\syde playground\servertest\servertest.cpp(167): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  g:\github repos\syde-playground\syde playground\servertest\servertest.cpp(167): note: the missing variadic argument 1 is required by format string '%d'
+  Generating code
+  All 63 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ServerTest.vcxproj -> G:\Github Repos\SYDE-Playground\SYDE Playground\x64\Release\ServerTest.exe

@@ -33,6 +33,7 @@ static GdiplusStartupInput startupInput;
 
 int main()
 {
+
 	LPCWSTR title = L"TIC TAC TOE";
 	SYDECredits::_GAMETITLE = "TIC TAC TOE";
 	SYDECredits::_ORGANISATION = "Callum Hands \nIn Association With Freebee Games";

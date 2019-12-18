@@ -31,6 +31,9 @@ TicTacToe::TicTacToe()
 	m_Board[7].setPos(Vector2(6, 6));
 	m_Board[8].setPos(Vector2(10, 6));
 
+	//INITITALIZE DIC
+	Dictionary::InitDictionary();
+
 }
 
 TicTacToePiece TicTacToe::atPos(Vector2 pos)
@@ -113,6 +116,11 @@ ConsoleWindow TicTacToe::window_draw_game(ConsoleWindow window, int windowWidth,
 		}
 		window.setTextAtPoint(Vector2(0, 18), "Controls: Arrow Keys: Move Cursor", BLACK_WHITE_BG);
 		window.setTextAtPoint(Vector2(0, 19), "          Space: Select", BLACK_WHITE_BG);
+		if (SYDEKeyCode::get('Q')._CompareState(KEY))
+		{
+			string test = Dictionary::findInfo("#IM0001");
+			window.setTextAtPoint(Vector2(2, 5), test, WHITE_RED_BG);
+		}
 		//USER INPUTS
 		if (SYDEKeyCode::get(VK_RIGHT)._CompareState(KEYDOWN))
 		{
