@@ -1,10 +1,6 @@
-﻿  ClientTest.cpp
-c:\users\chands\documents\github\syde-playground\syde playground\clienttest\clienttest.cpp(145): warning C4473: 'printf' : not enough arguments passed for format string
-  c:\users\chands\documents\github\syde-playground\syde playground\clienttest\clienttest.cpp(145): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
-  c:\users\chands\documents\github\syde-playground\syde playground\clienttest\clienttest.cpp(145): note: the missing variadic argument 1 is required by format string '%d'
-  Generating code
-  5 of 8 functions (62.5%) were compiled, the rest were copied from previous compilation.
-    4 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+﻿  Generating code
+  45 of 117 functions (38.5%) were compiled, the rest were copied from previous compilation.
+    7 functions were new in current compilation
+    8 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ClientTest.vcxproj -> C:\Users\chands\Documents\GitHub\SYDE-Playground\SYDE Playground\Release\ClientTest.exe

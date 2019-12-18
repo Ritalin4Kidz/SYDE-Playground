@@ -2,11 +2,12 @@
 #define WIN32_LEAN_AND_MEAN
 
 #include <windows.h>
+#include <iostream>
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <string>
 
 // Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib
 #pragma comment (lib, "Ws2_32.lib")
@@ -21,25 +22,31 @@ public:
 	Client() {}
 	virtual ~Client() {}
 
-	int __cdecl main(int argc, char **argv);
+	int __cdecl main(const char* message);
+
+	void SetAddress(std::string _add) { _ADDRESS = _add; }
+
+	private:
+		PCSTR _PORT = "27015";
+		std::string _ADDRESS = "127.0.0.1";
 };
-int __cdecl Client::main(int argc, char **argv)
+int __cdecl Client::main(const char* message)
 {
 	WSADATA wsaData;
 	SOCKET ConnectSocket = INVALID_SOCKET;
 	struct addrinfo *result = NULL,
 		*ptr = NULL,
 		hints;
-	const char *sendbuf = "this is a test";
+	const char *sendbuf = message;
 	char recvbuf[DEFAULT_BUFLEN];
 	int iResult;
 	int recvbuflen = DEFAULT_BUFLEN;
 
 	// Validate the parameters
-	if (argc != 2) {
-		printf("usage: %s server-name\n", argv[0]);
-		return 1;
-	}
+	//if (argc != 2) {
+	//	printf("usage: %s server-name\n", argv[0]);
+	//	return 1;
+	//}
 
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -54,7 +61,7 @@ int __cdecl Client::main(int argc, char **argv)
 	hints.ai_protocol = IPPROTO_TCP;
 
 	// Resolve the server address and port
-	iResult = getaddrinfo(argv[1], DEFAULT_PORT, &hints, &result);
+	iResult = getaddrinfo(_ADDRESS.c_str(), _PORT, &hints, &result);
 	if (iResult != 0) {
 		printf("getaddrinfo failed with error: %d\n", iResult);
 		WSACleanup();
@@ -134,11 +141,15 @@ int __cdecl Client::main(int argc, char **argv)
 int main(int argc, char **argv)
 {
 	Client newClient;
+	newClient.SetAddress("localhost");
 	while (true)
 	{
-		if (newClient.main(argc, argv) == 0)
+		std::cin.clear();
+		std::string msg = "";
+		std::cin >> msg;
+		if (newClient.main(msg.c_str()) == 0)
 		{
-			break;
+			//break;
 		}
 		else
 		{

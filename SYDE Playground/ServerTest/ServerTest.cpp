@@ -8,6 +8,7 @@
 #include <ws2tcpip.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string>
 
 // Need to link with Ws2_32.lib
 #pragma comment (lib, "Ws2_32.lib")
@@ -22,6 +23,9 @@ public:
 	virtual ~Server() {}
 
 	int __cdecl main(void);
+
+private:
+	std::string Message = "";
 };
 
 
@@ -107,6 +111,7 @@ int __cdecl Server::main(void)
 
 		iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
 		if (iResult > 0) {
+			printf(recvbuf);
 			printf("Bytes received: %d\n", iResult);
 
 			// Echo the buffer back to the sender
@@ -120,7 +125,9 @@ int __cdecl Server::main(void)
 			printf("Bytes sent: %d\n", iSendResult);
 		}
 		else if (iResult == 0)
+		{
 			printf("Connection closing...\n");
+		}
 		else {
 			printf("recv failed with error: %d\n", WSAGetLastError());
 			closesocket(ClientSocket);
@@ -153,7 +160,7 @@ int main()
 	{
 		if (newClient.main() == 0)
 		{
-			break;
+			//break;
 		}
 		else
 		{
