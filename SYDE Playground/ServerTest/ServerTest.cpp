@@ -16,7 +16,16 @@
 #define DEFAULT_BUFLEN 512
 #define DEFAULT_PORT "27015"
 
-int __cdecl main(void)
+class Server {
+public:
+	Server() {}
+	virtual ~Server() {}
+
+	int __cdecl main(void);
+};
+
+
+int __cdecl Server::main(void)
 {
 	WSADATA wsaData;
 	int iResult;
@@ -135,4 +144,22 @@ int __cdecl main(void)
 	WSACleanup();
 
 	return 0;
+}
+
+int main()
+{
+	Server newClient;
+	while (true)
+	{
+		if (newClient.main() == 0)
+		{
+			break;
+		}
+		else
+		{
+			printf("recv failed with error: %d\n");
+		}
+	}
+	system("pause");
+	return NULL;
 }

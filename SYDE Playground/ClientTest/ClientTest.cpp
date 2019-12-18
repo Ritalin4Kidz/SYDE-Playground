@@ -16,8 +16,14 @@
 
 #define DEFAULT_BUFLEN 512
 #define DEFAULT_PORT "27015"
+class Client {
+public:
+	Client() {}
+	virtual ~Client() {}
 
-int __cdecl main(int argc, char **argv)
+	int __cdecl main(int argc, char **argv);
+};
+int __cdecl Client::main(int argc, char **argv)
 {
 	WSADATA wsaData;
 	SOCKET ConnectSocket = INVALID_SOCKET;
@@ -123,4 +129,21 @@ int __cdecl main(int argc, char **argv)
 	WSACleanup();
 
 	return 0;
+}
+
+int main(int argc, char **argv)
+{
+	Client newClient;
+	while (true)
+	{
+		if (newClient.main(argc, argv) == 0)
+		{
+			break;
+		}
+		else
+		{
+			printf("recv failed with error: %d\n");
+		}
+	}
+	return NULL;
 }
