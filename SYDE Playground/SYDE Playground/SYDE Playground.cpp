@@ -38,6 +38,9 @@ public:
 private:
 	CustomAsset m_bg;
 	bool _autoClickOn = false;
+	int CLICK_DELAY = 0;
+	float _TIME_PASSED = 0.0f;
+	int clicks = 0;
 };
 int main()
 {
@@ -77,22 +80,43 @@ int main()
 ConsoleWindow AutoClicker::window_draw_game(ConsoleWindow window, int windowWidth, int windowHeight)
 {
 	window = m_bg.draw_asset(window, Vector2(0, 0));
+	//window.setTextAtPoint(Vector2(0, 15), "Click Delay: " + std::to_string(clicks), BLACK_WHITE_BG);
+	window.setTextAtPoint(Vector2(0, 16), "Click Delay: " + std::to_string(CLICK_DELAY), BLACK_WHITE_BG);
+	window.setTextAtPoint(Vector2(0, 17), "Press W To Increase Click Delay", BLACK_WHITE_BG);
+	window.setTextAtPoint(Vector2(0, 18), "Press S To Decrease Click Delay", BLACK_WHITE_BG);
 	window.setTextAtPoint(Vector2(0, 19), "AutoClick - Press A To Toggle", BLACK_WHITE_BG);
 	int x,y = 0;
 	if (_autoClickOn)
 	{
-		window = m_bg.draw_asset(window, Vector2(0, 0));
-		POINT cursorPos;
-		GetCursorPos(&cursorPos);
-		//x = 0;
-		x = cursorPos.x;
-		//y = 0;
-		y = cursorPos.y;
-		mouse_event(MOUSEEVENTF_LEFTDOWN, x, y, 0, 0);
+		if (CLICK_DELAY == 0 || _TIME_PASSED > CLICK_DELAY)
+		{
+			window = m_bg.draw_asset(window, Vector2(0, 0));
+			POINT cursorPos;
+			GetCursorPos(&cursorPos);
+			//x = 0;
+			x = cursorPos.x;
+			//y = 0;
+			y = cursorPos.y;
+			mouse_event(MOUSEEVENTF_LEFTDOWN, x, y, 0, 0);
+			_TIME_PASSED = 0;
+			//clicks++;
+		}
+		if (CLICK_DELAY > 0)
+		{
+			_TIME_PASSED += SYDEDefaults::getDeltaTime() * 1000;
+		}
 	}
 	if (SYDEKeyCode::get('A')._CompareState(KEYDOWN))
 	{
 		_autoClickOn = !_autoClickOn;
+	}
+	if (SYDEKeyCode::get('W')._CompareState(KEYDOWN) && CLICK_DELAY < 2000)
+	{
+		CLICK_DELAY += 100;
+	}
+	if (SYDEKeyCode::get('S')._CompareState(KEYDOWN) && CLICK_DELAY > 0)
+	{
+		CLICK_DELAY -= 100;
 	}
 	return window;
 }
