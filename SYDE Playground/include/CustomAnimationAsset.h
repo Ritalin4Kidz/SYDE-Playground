@@ -2,9 +2,15 @@
 #include <vector>
 #include "ConsoleWindow.h"
 #include "CustomAsset.h"
+#include "AssetsClass.h"
 #include <windows.h>
 
 using namespace std;
+
+class AnimationSpriteSheets {
+public:
+	static vector<CustomAsset> load_from_animation_sheet(const WCHAR* bmpFile, AssetsClass astVars, int file_totalWidth, int file_totalHeight, int sprite_width, int sprite_height, int startingSprite, int noSprites);
+};
 
 class CustomAnimationAsset {
 public:
